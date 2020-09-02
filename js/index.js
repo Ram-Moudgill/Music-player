@@ -1,3 +1,4 @@
+// audio.play();
 const musicRecord=[
     {
         song:"01 Sanam Re (Title Song) Arijit Singh 320Kbps.mp3",
@@ -31,7 +32,7 @@ const audio=document.getElementById('audio');
 const songName=document.getElementById('song-name');
 const singerName=document.getElementById('singer-name');
 const thumbnail=document.getElementById('img-thumbnail');
-audio.play();
+
 let count=0;
 console.log(musicRecord.length);
 forward.addEventListener('click',()=>
