@@ -2,9 +2,9 @@ window.addEventListener('DOMContentLoaded',()=>
 {
     setInterval(() => {
             document.body.style.background='#'+Math.floor(Math.random()*16777215).toString(16); 
-            document.body.style.color='#'+Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.color=document.body.style.background;
+            audio.style.background=document.body.style.background;
     }, 250);
-    console.log('hello');
 })
 const musicRecord=[
     {
@@ -40,12 +40,6 @@ const songName=document.getElementById('song-name');
 const singerName=document.getElementById('singer-name');
 const thumbnail=document.getElementById('img-thumbnail');
 let count=0;
-
-console.log(musicRecord.length);
-audio.addEventListener('click',()=>
-{
-    console.log('clicked');
-})
 forward.addEventListener('click',()=>
 {
     count++;
@@ -61,6 +55,8 @@ forward.addEventListener('click',()=>
     singerName.innerText=musicRecord[count].singerName;
     thumbnail.src=`images/${musicRecord[count].thumbnail}`;
     thumbnail.className='img-animation';
+    audio.style.background='red';
+    audio.style.color='red';
 })
 backward.addEventListener('click',()=>
 {
@@ -70,7 +66,6 @@ backward.addEventListener('click',()=>
         count=musicRecord.length;
         count--;
     }
-    console.log(count);
     audio.src=`music/${musicRecord[count].song}`;
     audio.play();
     songName.innerText=musicRecord[count].songName;
