@@ -1,11 +1,11 @@
-window.addEventListener('DOMContentLoaded',()=>
-{
-    setInterval(() => {
-            document.body.style.background='#'+Math.floor(Math.random()*16777215).toString(16); 
-            document.body.style.color=document.body.style.background;
-            audio.style.background=document.body.style.background;
-    }, 250);
-})
+// window.addEventListener('DOMContentLoaded',()=>
+// {
+//     setInterval(() => {
+//             document.body.style.background='#'+Math.floor(Math.random()*16777215).toString(16); 
+//             document.body.style.color=document.body.style.background;
+//             audio.style.background=document.body.style.background;
+//     }, 250);
+// })
 const musicRecord=[
     {
         song:"01 Sanam Re (Title Song) Arijit Singh 320Kbps.mp3",
@@ -72,20 +72,26 @@ backward.addEventListener('click',()=>
     singerName.innerText=musicRecord[count].singerName;
     thumbnail.src=`images/${musicRecord[count].thumbnail}`;
     thumbnail.className='img-animation';
+    // let playMusic;
 })
 play.addEventListener('click',()=>
 {
+   
     if(play.className==="fas fa-pause")
     {
-        
         play.className="fas fa-play";
         audio.pause();
-          thumbnail.className='';
-     
+        clearInterval(playMusic);
+        thumbnail.className='';
     }
     else
     {
         audio.play();
+        playMusic=setInterval(() => {
+            document.body.style.background='#'+Math.floor(Math.random()*16777215).toString(16); 
+            document.body.style.color=document.body.style.background;
+            audio.style.background=document.body.style.background;
+    }, 250);
         play.className="fas fa-pause"
         thumbnail.className='img-animation';
     }
