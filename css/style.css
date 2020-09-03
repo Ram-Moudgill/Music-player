@@ -48,6 +48,9 @@ body
     height: 200px ;
     width: 200px;
     border-radius: 50%;
+}
+.img-animation
+{
     animation: rotation 4s infinite linear;
 }
 @keyframes rotation {

@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded',()=>
 {
     setInterval(() => {
-            document.body.style.background='#'+Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.background='#'+Math.floor(Math.random()*16777215).toString(16); 
             document.body.style.color='#'+Math.floor(Math.random()*16777215).toString(16);
     }, 250);
     console.log('hello');
@@ -54,13 +54,13 @@ forward.addEventListener('click',()=>
     {
         count=0;
     }
-    // console.log(count);
     audio.src=`music/${musicRecord[count].song}`;
     audio.play();
     play.className="fas fa-pause";
     songName.innerText=musicRecord[count].songName;
     singerName.innerText=musicRecord[count].singerName;
     thumbnail.src=`images/${musicRecord[count].thumbnail}`;
+    thumbnail.className='img-animation';
 })
 backward.addEventListener('click',()=>
 {
@@ -76,6 +76,7 @@ backward.addEventListener('click',()=>
     songName.innerText=musicRecord[count].songName;
     singerName.innerText=musicRecord[count].singerName;
     thumbnail.src=`images/${musicRecord[count].thumbnail}`;
+    thumbnail.className='img-animation';
 })
 play.addEventListener('click',()=>
 {
@@ -84,11 +85,13 @@ play.addEventListener('click',()=>
         
         play.className="fas fa-play";
         audio.pause();
+          thumbnail.className='';
      
     }
     else
     {
         audio.play();
         play.className="fas fa-pause"
+        thumbnail.className='img-animation';
     }
 })
