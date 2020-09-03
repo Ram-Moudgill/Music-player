@@ -1,7 +1,7 @@
 *{
     margin:0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 html
 {
@@ -18,7 +18,7 @@ body
 .main-cont
 {
     background: white;
-    height: 447px;
+    height: 490px;
     width: 300px;
     vertical-align: middle;
     /* margin-top: 160px; */
@@ -28,7 +28,7 @@ body
 .main-cont h1, h2
 {
     text-align: center;
-    color: rgba(63, 63, 66, 0.918);
+    /* color: rgba(63, 63, 66, 0.918); */
     margin-top: 10px;
 }
 .main-cont h2{
@@ -36,8 +36,8 @@ body
 }
 .img-cont
 {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     display: block;
     margin: auto;
     margin-top: 33px;
@@ -45,8 +45,8 @@ body
 }
 .img-cont img
 {
-    height: 150px ;
-    width: 150px;
+    height: 200px ;
+    width: 200px;
     border-radius: 50%;
     animation: rotation 4s infinite linear;
 }
