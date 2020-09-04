@@ -1,11 +1,3 @@
-// window.addEventListener('DOMContentLoaded',()=>
-// {
-//     setInterval(() => {
-//             document.body.style.background='#'+Math.floor(Math.random()*16777215).toString(16); 
-//             document.body.style.color=document.body.style.background;
-//             audio.style.background=document.body.style.background;
-//     }, 250);
-// })
 const musicRecord=[
     {
         song:"01 Sanam Re (Title Song) Arijit Singh 320Kbps.mp3",
@@ -30,7 +22,7 @@ const musicRecord=[
         songName:'Bekhayli',
         singerName:'Sachet Tandon',
         thumbnail:'Bekhayli.jpg'
-    } 
+    }
 ]
 const backward=document.getElementById('backward');
 const forward=document.getElementById('forward');
@@ -43,7 +35,6 @@ let count=0;
 forward.addEventListener('click',()=>
 {
     count++;
-    console.log(count);
     if(count>musicRecord.length-1)
     {
         count=0;
@@ -91,7 +82,8 @@ play.addEventListener('click',()=>
             document.body.style.background='#'+Math.floor(Math.random()*16777215).toString(16); 
             document.body.style.color=document.body.style.background;
             audio.style.background=document.body.style.background;
-    }, 250);
+            thumbnail.style.borderColor=document.body.style.background;
+    }, 400);
         play.className="fas fa-pause"
         thumbnail.className='img-animation';
     }

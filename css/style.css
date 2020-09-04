@@ -17,11 +17,10 @@ body
 }
 .main-cont
 {
-    background: white;
+    background: #ffffff;
     height: 490px;
-    width: 300px;
+    width: 310px;
     vertical-align: middle;
-    /* margin-top: 160px; */
     border-radius: 20px;
     box-shadow: 0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4);
 }
@@ -48,6 +47,7 @@ body
     height: 200px ;
     width: 200px;
     border-radius: 50%;
+    border: 8px solid #ffffff;
 }
 .img-animation
 {
